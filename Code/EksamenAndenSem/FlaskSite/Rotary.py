@@ -8,10 +8,10 @@ from ColorWho import start_threaded_spin, spin_finished_event
 import os
 import json
 
-# Initialize the encoder and reset button
+
 encoder = RotaryEncoder(a=16, b=15, wrap=False, max_steps=100000)
-sleep(0.5)  # Short delay to ensure encoder is ready
-encoder.steps = 0  # Reset steps to 0 at the start
+sleep(0.5)  
+encoder.steps = 0  
 reset_button = Button(14)
 motor_clockwise = LED(23)
 
