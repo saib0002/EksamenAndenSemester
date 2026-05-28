@@ -6,7 +6,7 @@ from Modelss import User, Winner, db
 
 app = Flask(__name__)
 
-# This creates a file named 'test.db' in your project folder
+
 basedir = os.path.abspath(os.path.dirname(__file__))
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'test.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -17,9 +17,9 @@ db.init_app(app)
 
 
 
-# Initialize the database and add dummy data
+
 with app.app_context():
-    db.create_all()  # Creates the database file
+    db.create_all()  
     
 
 @app.route("/")
@@ -37,7 +37,7 @@ def add():
     db.session.add(new_user)
     db.session.commit()
     
-    # Redirect back to the home page so you can see the updated list
+    
     return redirect(url_for('home'))
 
 @app.route("/site1/")
