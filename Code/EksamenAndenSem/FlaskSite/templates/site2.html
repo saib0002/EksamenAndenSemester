@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block title %}
+Leads
+{% endblock %}
+{% block content %}
+<p>Leads</p>
+<p>Here are the users from the database:</p>
+    
+    <ul class="list-group">
+        {% for user in users %}
+            <li class="list-group-item">{{ user.username }} - {{ user.email }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

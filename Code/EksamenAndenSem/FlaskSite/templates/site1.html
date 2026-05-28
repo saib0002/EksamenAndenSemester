@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block title %}
+Winner table
+{% endblock %}
+{% block content %}
+<p>site 1</p>
+<p>Here are the wins from the database:</p>
+    
+    <ul class="list-group">
+        {% for winner in winners %}
+            <li class="list-group-item">{{ winner.id }} - {{ winner.color }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
